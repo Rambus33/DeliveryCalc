@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>DeliveryCalc</AssemblyName>
+    <RootNamespace>DeliveryCalc</RootNamespace>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClientAppOld\**" />
+    <Compile Remove="wwwroot\distOld\**" />
+    <Compile Remove="wwwroot\dist\**" />
+    <Content Remove="ClientAppOld\**" />
+    <Content Remove="wwwroot\distOld\**" />
+    <Content Remove="wwwroot\dist\**" />
+    <EmbeddedResource Remove="ClientAppOld\**" />
+    <EmbeddedResource Remove="wwwroot\distOld\**" />
+    <EmbeddedResource Remove="wwwroot\dist\**" />
+    <None Remove="ClientAppOld\**" />
+    <None Remove="wwwroot\distOld\**" />
+    <None Remove="wwwroot\dist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\indexOld.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
